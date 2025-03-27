@@ -32,6 +32,8 @@ jobs:
         run: poetry run flake8 jogo.py
       - name: Verificar estilo com Pyflint
         run: poetry run pylint jogo.py
+      - name: Verificar Tipagem com Pyflint
+        run: poetry run mypy jogo.py
       - name: Analisar Complexidade com Radon
         run: poetry run radon cc jogo.py -a
  
